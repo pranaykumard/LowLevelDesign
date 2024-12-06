@@ -1,14 +1,16 @@
 package library_mgmt_system;
 
 public abstract class User {
-    private String userId;
+    private final String userId;
     private String name;
     private String contactInfo;
+    public static int totalUsers;
 
     public User() {
         this.userId = generateUniqueId();
 
     }
+
     public User(String name,String contactInfo) {
         this.userId = generateUniqueId();
         this.name = name;
@@ -19,8 +21,13 @@ public abstract class User {
         this.name = user.getName();
         this.contactInfo = user.getContactInfo();
     }
-    public String generateUniqueId(){
-        return "0";
+
+    public static int getTotalUsers(){
+        return totalUsers;
+    }
+    public final String generateUniqueId(){
+        totalUsers += 1;
+        return ""+(totalUsers+1);
     }
 
     public String getUserId() {
