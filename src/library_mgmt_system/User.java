@@ -15,7 +15,7 @@ public abstract class User {
         this.contactInfo = contactInfo;
     }
     public User(User user) {
-        this.userId = user.getUserId();
+        this.userId = generateUniqueId();
         this.name = user.getName();
         this.contactInfo = user.getContactInfo();
     }
@@ -33,10 +33,6 @@ public abstract class User {
 
     public String getName() {
         return name;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
     }
 
     public void setName(String name) {
