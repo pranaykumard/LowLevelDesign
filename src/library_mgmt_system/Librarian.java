@@ -1,10 +1,10 @@
 package library_mgmt_system;
 
 public class Librarian extends User {
-    private String employeeNumber;
-    public Librarian(String name,String contactInfo,String employeeNumber) {
+    private final String employeeNumber;
+    public Librarian(String name,String contactInfo) {
         super(name,contactInfo);
-        this.employeeNumber = employeeNumber;
+        this.employeeNumber = generateUniqueId();
     }
 
     @Override
