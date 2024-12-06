@@ -4,7 +4,7 @@ public abstract class User {
     private final String userId;
     private String name;
     private String contactInfo;
-    public static int totalUsers;
+    public static int totalUsers = 0;
 
     public User() {
         this.userId = generateUniqueId();
@@ -18,8 +18,8 @@ public abstract class User {
     }
     public User(User user) {
         this.userId = generateUniqueId();
-        this.name = user.getName();
-        this.contactInfo = user.getContactInfo();
+        this.name = user.name;
+        this.contactInfo = user.contactInfo;
     }
 
     public static int getTotalUsers(){

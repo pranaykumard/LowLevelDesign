@@ -2,7 +2,7 @@ package library_mgmt_system;
 
 public class Member extends User {
     private int borrowedBooksCount;
-    static int MAX_BORROW_LIMIT = 5;
+    public final static int MAX_BORROW_LIMIT = 5;
     public Member(String name,String contactInfo,int borrowedBooksCount) {
         super(name,contactInfo);
         this.borrowedBooksCount = borrowedBooksCount;
@@ -14,7 +14,9 @@ public class Member extends User {
 
     @Override
     public void displayDashboard() {
-        System.out.println("Member Dashboard and Books Borrowed: "+borrowedBooksCount);
+        System.out.println("Member Dashboard");
+        System.out.println("Name of Member is: "+this.getName());
+        System.out.println("Books Borrowed: "+borrowedBooksCount);
     }
 
     @Override
