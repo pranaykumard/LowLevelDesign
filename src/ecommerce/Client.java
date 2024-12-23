@@ -2,6 +2,7 @@ package ecommerce;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Client {
@@ -54,5 +55,6 @@ public class Client {
         for (Item item : inventory.getAllItems()) {
             System.out.println(item);
         }
+
     }
 }
